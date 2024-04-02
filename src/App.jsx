@@ -6,6 +6,9 @@ function App() {
   const [timer1, setTimer1] = useState(20);
   const [timer2, setTimer2] = useState(20);
   const [timer3, setTimer3] = useState(20);
+  const [timer4, setTimer4] = useState(20);
+  const [point, setPoint] = useState([]);
+
 
   const questions = [
     {
@@ -21,7 +24,12 @@ function App() {
     {
       enonce: "Combien d'étoiles a la France ?",
       reponses: ["0", "1", "2", "3"],
-      bonneReponse: "2"
+      bonneReponse: "1"
+    },
+    {
+      enonce: "Capitale de la France ?",
+      reponses: ["Rome", "Marseille", "Paris", "Lille"],
+      bonneReponse: "Paris"
     }
   ];
 
@@ -33,6 +41,8 @@ function App() {
         setTimer2(timer => timer - 1);
       } else if (QuestionActuelle === 3) {
         setTimer3(timer => timer - 1);
+      } else if (QuestionActuelle === 4) {
+        setTimer4(timer => timer - 1);
       }
     }, 1000);
 
@@ -60,6 +70,8 @@ function App() {
           {QuestionActuelle === 1 && <p>Temps restant : {timer1} secondes</p>}
           {QuestionActuelle === 2 && <p>Temps restant : {timer2} secondes</p>}
           {QuestionActuelle === 3 && <p>Temps restant : {timer3} secondes</p>}
+          {QuestionActuelle === 4 && <p>Temps restant : {timer4} secondes</p>}
+
           <div>
             {questions[QuestionActuelle - 1].reponses.map((reponse, index) => (
               <button key={index} value={reponse} onClick={() => verifReponse(reponse)}>{reponse}</button>

@@ -4,15 +4,23 @@
 }
 
 .question1 {
-  display: ruby-text;
+  display: flow-root;
+  text-align: center;
 }
 
 .question2 {
-  display: ruby-text;
+  display: flow-root;
+  text-align: center;
 }
 
 .question3 {
-  display: ruby-text;
+  display: flow-root;
+  text-align: center;
+}
+
+.question4 {
+  display: flow-root;
+  text-align: center;
 }
 
 button {
