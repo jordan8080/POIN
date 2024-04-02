@@ -1,0 +1,22 @@
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.question1 {
+  display: ruby-text;
+}
+
+.question2 {
+  display: ruby-text;
+}
+
+.question3 {
+  display: ruby-text;
+}
+
+button {
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
